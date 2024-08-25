@@ -2,50 +2,84 @@ import React, { useState } from "react";
 import {
   FlatList,
   Image,
+  Platform,
+  Pressable,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
 } from "react-native";
 import { bats } from "../Database/JSON_Data";
+import YesNoPage from "../Screens/YesNoPage";
 import { useNavigation } from "@react-navigation/native";
-import YesPage from "../Screens/YesPage";
-import { heightPercentageToDP } from "react-native-responsive-screen";
 
 const BatsFlatList = () => {
-  const [clickedYes, setClickedYes] = useState(false);
+  const [isModal, setIsModal] = useState(false);
+  const [onPressedData, setOnPressedData] = useState();
+  const [yesButton, setYesButton] = useState(false);
+  const [noButton, setNoButton] = useState(false);
+  const navigation = useNavigation();
+
   const data = bats;
+
+  const handleYesButton = (item) => {
+    setOnPressedData(item);
+    setIsModal(true);
+    setYesButton(true);
+    setNoButton(false);
+  };
+  const handleNoButton = (item) => {
+    setOnPressedData(item);
+    setIsModal(true);
+    setYesButton(false);
+    setNoButton(true);
+  };
 
   return (
     <View style={styles.mainView}>
       <FlatList
         data={data}
         renderItem={({ item }) => (
-          <View style={styles.container}>
+          <View key={item.id} style={styles.container}>
             <View style={styles.itemArrangment}>
-              <View style={styles.items}>
+              <Pressable
+                style={styles.items}
+                onPress={() => navigation.navigate("question", {item})}
+              >
                 <Text style={styles.question}>{item?.Question}</Text>
                 <Text style={styles.text}>
                   H2H last 5 T20 : {item?.H2H_last_5_T20}
                 </Text>
-              </View>
+              </Pressable>
               <Image source={item?.icon} style={styles.icon} />
             </View>
             <View style={styles.buttons}>
               <TouchableOpacity
                 style={styles.yesButton}
-                onPress={() => setClickedYes(true)}
+                onPress={() => handleYesButton(item)}
               >
                 <Text style={styles.buttonText}>Yes {item.YesValue}</Text>
               </TouchableOpacity>
-              <TouchableOpacity style={styles.noButton}>
+              <TouchableOpacity
+                style={styles.noButton}
+                onPress={() => handleNoButton(item)}
+              >
                 <Text style={styles.buttonText}>No {item.NoValue}</Text>
               </TouchableOpacity>
             </View>
-            {clickedYes && <YesPage item={item} />}
           </View>
         )}
       />
+
+      {isModal && (
+        <YesNoPage
+          setIsModal={setIsModal}
+          isModal={isModal}
+          item={onPressedData}
+          yesButton={yesButton}
+          noButton={noButton}
+        />
+      )}
     </View>
   );
 };
@@ -53,7 +87,7 @@ const BatsFlatList = () => {
 export default BatsFlatList;
 const styles = StyleSheet.create({
   mainView: {
-    height: heightPercentageToDP(75),
+    height: Platform.OS === "ios" ? "70%" : "75%",
   },
   container: {
     height: 250,

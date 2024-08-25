@@ -1,5 +1,6 @@
 export const bats = [
   {
+    id: 1,
     Question: "Kolkata to win the match vs Mumbai?",
     H2H_last_5_T20: "Kolkata 4, Mumbai 1, DRAW 0",
     icon: require("../images/—Pngtree—cricket championship concept_15051733.png"),
@@ -7,6 +8,7 @@ export const bats = [
     NoValue: "₹ 4.7",
   },
   {
+    id: 2,
     Question: "Kolkata to win the match vs Mumbai?",
     H2H_last_5_T20: "Kolkata 4, Mumbai 1, DRAW 0",
     icon: require("../images/—Pngtree—cricket championship concept_15051733.png"),
@@ -14,6 +16,7 @@ export const bats = [
     NoValue: "₹ 4.7",
   },
   {
+    id: 3,
     Question: "Kolkata to win the match vs Mumbai?",
     H2H_last_5_T20: "Kolkata 4, Mumbai 1, DRAW 0",
     icon: require("../images/—Pngtree—cricket championship concept_15051733.png"),
@@ -21,6 +24,7 @@ export const bats = [
     NoValue: "₹ 4.7",
   },
   {
+    id: 4,
     Question: "Kolkata to win the match vs Mumbai?",
     H2H_last_5_T20: "Kolkata 4, Mumbai 1, DRAW 0",
     icon: require("../images/—Pngtree—cricket championship concept_15051733.png"),
@@ -31,6 +35,7 @@ export const bats = [
 
 export const category = [
   {
+    id: 1,
     name: "Bitcoin",
     symbol: "BTC",
     price: "$5438",
@@ -38,11 +43,13 @@ export const category = [
     icon: require("../images/vecteezy_bitcoin-3d-rendering-icon-illustration_28585711.png"),
   },
   {
+    id: 2,
     name: "IPL",
     year: "2024",
     icon: require("../images/—Pngtree—cricket championship concept_15051733.png"),
   },
   {
+    id: 3,
     name: "Ethereum",
     symbol: "ETH",
     price: "$5438",
@@ -51,14 +58,108 @@ export const category = [
   },
 
   {
+    id: 4,
     name: "Men's world cup",
     sport: "Cricket",
     icon: require("../images/pngwing.com.png"),
   },
 
   {
+    id: 5,
     name: "champion's league",
     sport: "Football",
     icon: require("../images/—Pngtree—a football player kicking the_16582200.png"),
+  },
+];
+export const buyerSellerList = [
+  {
+    id: 1,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 2,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 3,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 4,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 5,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 6,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 7,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 8,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 9,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
+  },
+  {
+    id: 10,
+    icon: require("../images/icons8-user-30.png"),
+    buyer: "Hella",
+    price_offered: "₹ 9",
+    seller: "Robin",
+    price_bid: "₹ 1",
+    timestamp: "a few seconds ago",
   },
 ];

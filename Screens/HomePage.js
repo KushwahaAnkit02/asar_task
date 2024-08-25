@@ -1,5 +1,5 @@
 import React from "react";
-import { StatusBar, StyleSheet, Text, View } from "react-native";
+import { SafeAreaView, StatusBar, StyleSheet, Text, View } from "react-native";
 import Header from "./Header";
 import { category } from "../Database/JSON_Data";
 import CategoryFlatList from "../Components/CategoryFlatList";
@@ -10,12 +10,15 @@ const HomePage = () => {
   console.log(categories);
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView>
       <StatusBar style="auto" />
-      <Header />
-      <CategoryFlatList />
-      <BatsFlatList />
-    </View>
+      <View style={styles.container}>
+        <StatusBar style="auto" />
+        <Header />
+        <CategoryFlatList />
+        <BatsFlatList />
+      </View>
+    </SafeAreaView>
   );
 };
 

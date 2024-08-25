@@ -36,15 +36,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     backgroundColor: "black",
-    paddingHorizontal: 10,
-    shadowColor: "white",
-    shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    shadowOpacity: 5,
-    shadowRadius: 6,
-    elevation: 5,
+    paddingHorizontal: 10,   
   },
   text: {
     color: "white",
