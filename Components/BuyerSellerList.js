@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import {
-  Button,
   Dimensions,
   Image,
   Platform,
@@ -12,6 +11,7 @@ import {
 import { buyerSellerList } from "../Database/JSON_Data";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { heightPercentageToDP } from "react-native-responsive-screen";
 
 const BuyerSellerList = () => {
   const [visibleItems, setVisibleItems] = useState(4);
@@ -134,21 +134,19 @@ const BuyerSellerList = () => {
           >
             Keep Trading !
           </Text>
-          <View>
-            <View style={styles.buttons}>
-              <TouchableOpacity
-                style={styles.yesButton}
-                onPress={() => console.log("yes")}
-              >
-                <Text style={styles.buttonText}>Yes ₹ 5.3</Text>
-              </TouchableOpacity>
-              <TouchableOpacity
-                style={styles.noButton}
-                onPress={() => console.log("No")}
-              >
-                <Text style={styles.buttonText}>No ₹ 4.7</Text>
-              </TouchableOpacity>
-            </View>
+          <View style={styles.buttons}>
+            <TouchableOpacity
+              style={styles.yesButton}
+              onPress={() => console.log("yes")}
+            >
+              <Text style={styles.buttonText}>Yes ₹ 5.3</Text>
+            </TouchableOpacity>
+            <TouchableOpacity
+              style={styles.noButton}
+              onPress={() => console.log("No")}
+            >
+              <Text style={styles.buttonText}>No ₹ 4.7</Text>
+            </TouchableOpacity>
           </View>
         </View>
       </View>
@@ -160,10 +158,11 @@ const styles = StyleSheet.create({
   scrollView: {
     flex: 1,
     backgroundColor: "black",
+    marginBottom: 20,
   },
   container: {
     flexGrow: 1,
-    paddingBottom: 20, // Ensures there's space at the bottom of the scroll content
+    paddingBottom: 20,
   },
   mainView: {
     flex: 1,
@@ -244,7 +243,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
     flexDirection: "row",
     justifyContent: "space-between",
-    width: "70%",
+    width: "73.5%",
   },
   headText: {
     color: "white",
@@ -256,6 +255,7 @@ const styles = StyleSheet.create({
   },
   tradersView2: {
     marginTop: 20,
+
     flexDirection: "row",
     justifyContent: "space-between",
     borderBottomColor: "white",
